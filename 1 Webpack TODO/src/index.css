@@ -1,0 +1,60 @@
+.sub{
+    width: 100%;
+    height: 60px; 
+    display: flex;  
+}
+
+
+img{
+    height: 100%;
+    margin-right: 35px;
+    margin-top: -5px;
+}
+
+h1{
+    color: black;
+    margin-top: 7px;
+}
+textarea{
+    border: none;
+    font-size: 20px;
+    width: 100%;
+    height: 450px;
+}
+
+button{
+    width: 12%;
+    margin-left: 5%;
+    height: 70%;
+    font-weight: bolder;
+    color: black;
+}
+#New{
+    margin-left: 0%;
+}
+#Old{
+    width: 15%;
+}
+#main{
+        border: 1px solid gray;
+        padding: 20px;
+        cursor: auto; 
+        height:600px;
+        width: 45%;
+        margin:auto;
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;    
+}
+
+#input{
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+#alert{
+    height: 20px;
+    width:auto;
+    margin: auto;
+    visibility: hidden;
+    color: black;
+    background-color: burlywood;
+}
