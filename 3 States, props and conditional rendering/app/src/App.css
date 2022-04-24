@@ -1,0 +1,24 @@
+.App{
+  text-align: center;
+}
+
+
+.circlelist{
+  list-style: circle;
+}
+.squarelist{
+  list-style: square;
+}
+
+.number{
+  list-style: decimal;
+  margin-top: 25px;
+}
+
+.Alphabate{
+  list-style: upper-alpha;
+}
+.nav{
+  display: flex;
+  margin: auto;
+}
