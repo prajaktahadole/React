@@ -1,11 +1,10 @@
  import "./Category.css"
 
  function Category({image, lable}){
-     return <div>
-    
-        
+     return <div >
+
+
          <div className="category">
-            
              <img src={image} alt=""></img>
              <b>{lable}</b>
          </div> 

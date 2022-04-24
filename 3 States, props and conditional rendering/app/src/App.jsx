@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import {Category} from './components/Category';
+import {Counter} from './components/counter'
 
 function App() {
 
@@ -51,12 +52,16 @@ function App() {
           ))}
         </div>
 
-
       <div>
         <Category />
       </div>
 
-      
+      <div>
+        <Counter/>
+      </div>
+
+
+
     </div>
   );
 }
