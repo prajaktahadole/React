@@ -16,9 +16,9 @@ function Todo(){
     return (
         <div>
            < TodoInput  getData={getData}/>
-           {/* Todolist           4- adding data in todo */}
+           {/* Todolist           4- adding data in todo*/ }
            { todoList.map((e) => (
-               <div>{e}</div>           
+               <div>{e}</div>
            ))}
        </div>
     );
