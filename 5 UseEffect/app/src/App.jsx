@@ -1,10 +1,7 @@
 import { useState } from 'react'
-import logo from './logo.svg'
 import './App.css'
 import { Hello, Example2} from './component/sample';
-
- 
-
+import Counter from './component/countdown';
 
 function App() {
  
@@ -23,6 +20,16 @@ function App() {
        <Example2></Example2>
        </div>
 
+
+       <div>
+         <Counter></Counter>
+       </div>
+
+
+      
+
+       
+      
      
     </div>
   )

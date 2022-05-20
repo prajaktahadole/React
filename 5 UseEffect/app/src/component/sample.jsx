@@ -4,11 +4,13 @@ import { useState ,useEffect} from "react";
 export const Hello = () =>{
    
     return ( 
-       <div > Hello  </div>
-
-     
+       <div > Hello  </div> 
     )
 }    
+
+
+
+
 
 
 export const Example2 = () =>{
@@ -26,7 +28,7 @@ export const Example2 = () =>{
     useEffect(() =>{
        // console.log("Inside effect 2");
         document.title = `you have clicked ${count} times`
-    },[count]);
+    },[count]);   // put dependacy inside dependancy array if their are multiple useEffect
 
 
     console.log("After");
