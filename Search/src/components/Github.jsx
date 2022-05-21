@@ -1,27 +1,67 @@
 import React, { useState } from "react";
-import axios from "axios";
-import { useEffect , useState} from "react";
+import { fetchUsers } from "./fetchUsers";
 
-const getGithubUsers = ( q = "albseb511", page= 1) => {
-    return axios("https://api.github.com/search/users", {
-      params : {
-          q,
-          per_page : 5,
-          page
-      }  
-    });
-};
+const Github = ()=>{
+    const [query, setQuery] = useState("");
+    const [isLoading , setIsLoading] = useState(false);
+    const [isError , setIsError] = useState(false);
+    const [users , setUsers] =   useState([]);
+    
+
+    React.useEffect(() =>{
+        setIsLoading(true);
+        setIsError(false);
+        fetchUsers("masai")
+        .then((res)=>{
+            setUsers(res.data.items);
+        })
+        .catch((err) =>{
+            setIsError(true);
+        })
+        .finally( () =>{
+            setIsLoading(false);
+        });
+    }, [])
 
 
 
-function Github() {
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(false);
-    const [query, setQuery] = useState("masai");
-    const [data, setData] = useState([]);
-    const [page, setPage] = useState(1)
-    console.log(1);
+    const handleSearch = () =>{
+        setIsLoading(true);
+        setIsError(false);
+        fetchUsers(query)
+        .then((res)=>{
+            setUsers(res.data.items);
+        })
+        .catch((err) =>{
+            setIsError(true);
+        })
+        .finally( () =>{
+            setIsLoading(false);
+        });
+    };
 
-    useEffect()
-
+    return (
+        <>
+        <h1>GitHub</h1>
+        <div>
+            <input 
+             value={query}
+             onChange={(e) => setQuery(e.target.value)} 
+             placeholder="search"
+            />
+            <button disabled={isLoading} onClick={handleSearch}>
+                {isLoading ? "loading" : "SEARCH"}
+                </button>
+        </div>
+        {isError ? "please fill te text" : null}
+        <div>
+            {users?.map((item) =>(
+                <div key={item.id}>{item.login}</div>
+            ))}
+        </div>
+        </>
+    )
 }
+
+
+export {Github};
