@@ -7,7 +7,7 @@ function fetchUsers(query , page){
     }
     return axios.get("https://api.github.com/search/users", {
         params : {
-            q : query
+            q : query               // using get request pass params
         }
     });
 }
