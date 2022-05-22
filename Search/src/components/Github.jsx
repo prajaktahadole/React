@@ -41,8 +41,8 @@ const Github = ()=>{
     };
 
     return (
-        <>
-        <h1>GitHub</h1>
+       <div id="search">
+            <h1>GitHub</h1>
         <div>
             <input 
              value={query}
@@ -59,7 +59,7 @@ const Github = ()=>{
                 <div key={item.id}>{item.login}</div>
             ))}
         </div>
-        </>
+       </div>
     )
 }
 
