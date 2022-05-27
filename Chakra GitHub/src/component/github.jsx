@@ -1,4 +1,4 @@
-import { Box, Center, Container, Heading , Stack, Text, VStack, Image} from "@chakra-ui/react"
+import { Box, Center, Container, Heading , Stack, Text, VStack, Image, Skeleton, SkeletonCircle, SkeletonText, Avatar, SimpleGrid} from "@chakra-ui/react"
 import axios from "axios";
 import { useEffect, useState } from "react"
 
@@ -36,15 +36,24 @@ function GitHub (){
 
 
     return (
-        <Container>
-            <Box>
+       <Skeleton isLoaded={!loading}>
+           {/* create element in this way */}
+            <Stack direction="row" padding="6" boxShadow='lg' bg="white">           
+            <SkeletonCircle size='10' />    
+            <SkeletonText mt='4' noOfLines={4} spacing='4' />
+            </Stack>
+
+        
+            <Box p={2}>
             <Heading>GitHub Search</Heading>
-            {
-                data?.map(item => <GitHuBUserCard key={item.id} {...item}/>)
-            }
-         
+            <SimpleGrid columns={2} gap={4}>
+               {
+                    data?.map(item => <GitHuBUserCard key={item.id} {...item}/>)
+                }
+            </SimpleGrid>
            </Box>
-        </Container>
+    
+       </Skeleton>
     )
 }
 
@@ -62,11 +71,13 @@ const GitHuBUserCard =({
         <Box >
             <Stack direction="row" boxShadow="lg" p={4} border="1px solid">
                 <Center >
-                <Image w="100px"
-                src={avatar_url}></Image>
+                {/* <Image w="100px"
+                src={avatar_url}></Image> */}
+                <Avatar w="60px"
+                src={avatar_url} ></Avatar>
                 </Center>
 
-                <VStack>
+                <VStack maxW="100%" overflow="hidden">
                     <Heading>{login}</Heading>
                     <Text>{html_url}</Text>
                     
