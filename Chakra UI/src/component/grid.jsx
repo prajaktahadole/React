@@ -31,7 +31,7 @@ export  const Gridd =() =>{
           <GridItem rowSpan={[1,2]} colSpan={[2 , 1]} bg='red' />
           <GridItem colSpan={2} bg='papayawhip' />
           <GridItem colSpan={2} bg='yellow' />
-          <GridItem colSpan={4} bg='blue' />
+          <GridItem colSpan={[2, 4]} bg='blue' />
         </Grid>
 
        </Box>

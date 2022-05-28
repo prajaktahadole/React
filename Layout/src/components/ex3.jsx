@@ -1,7 +1,12 @@
+import { Box , Heading} from "@chakra-ui/react"
 
 function Example3 (){
     return (
-        "Example3"
+       <Box>
+            <Heading>LAYOUT - 3</Heading>
+
+
+       </Box>
     )
 }
 

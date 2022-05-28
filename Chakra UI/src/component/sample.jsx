@@ -69,7 +69,7 @@ export const Sample =()=>{
             <Box borderColor="black" border={"1px solid"}>Stack 3</Box>
             <Box borderColor="black" border={"1px solid"}>Stack 4</Box>
         </Stack>
-
+        
         <HStack spacing={2} 
         backgroundColor={{
         base : "yellow",
