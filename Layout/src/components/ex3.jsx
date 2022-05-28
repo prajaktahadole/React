@@ -3,7 +3,10 @@ import { Box , Heading, Grid, GridItem} from "@chakra-ui/react"
 function Example3 (){
     return (
        <Box>
+           <hr></hr>
             <Heading>LAYOUT - 3</Heading>
+            <br></br>
+
 
             <Grid
            h='1000px'

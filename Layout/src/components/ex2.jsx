@@ -4,7 +4,9 @@ function Example2 () {
     return(
        
       <Box>
+        <hr></hr>
         <Heading>LAYOUT - 2</Heading>
+        <br></br>
           <Grid
            h='300px'
            templateRows='repeat(3, 1fr)'
