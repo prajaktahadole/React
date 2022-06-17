@@ -1,9 +1,11 @@
 import './App.css'
+import Landing from './Landing page/landing'
 
 function App() {
+
   return (
     <div className="App">
-      "hello "
+     <Landing></Landing>
     </div>
   )
 }
