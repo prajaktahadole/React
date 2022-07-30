@@ -16,7 +16,7 @@ export const Example1 = () =>{
               ["rgb(0,114,187)", 
               "rgb(0,114,187)"]
             } 
-            w={[ "100%", "25%"]}
+            
             h={["200px" , "100%" ]}
             >
           <Center h="100%">NAV</Center>

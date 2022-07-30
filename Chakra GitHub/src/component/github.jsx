@@ -45,7 +45,7 @@ function GitHub (){
 
         
             <Box p={2}>
-            <Heading>GitHub Search</Heading>
+            <Heading> Search</Heading>
             <SimpleGrid columns={2} gap={4}>
                {
                     data?.map(item => <GitHuBUserCard key={item.id} {...item}/>)
